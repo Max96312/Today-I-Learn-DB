@@ -1,0 +1,22 @@
+ALTER TABLE customers
+ADD COLUMN point INT NOT NULL DEFAULT 0;
+
+DESC customers;
+
+ALTER TABLE customers
+MODIFY COLUMN address VARCHAR(500) NOT NULL;
+
+DESC customers;
+
+ALTER TABLE customers
+DROP COLUMN point;
+
+DROP TABLE products;
+
+TRUNCATE TABLE products;
+
+SET FOREIGN_KEY_CHECKS = 0; -- 비활성화
+
+TRUNCATE TABLE products;
+
+SET FOREIGN_KEY_CHECKS = 1; -- 활성화
